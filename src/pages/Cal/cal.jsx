@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react'
 import "./style.css"
+import digitButton from '../../components/DigitButton/digitButton'
 
 export const ACTIONS = {
   ADD_DIGIT:'add-digit',
@@ -32,21 +33,23 @@ export default function () {
         </div>
         <button className='span-two'>AC</button>
         <button>DEL</button>
-        <button>÷</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>*</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>-</button>
-        <button>.</button>
-        <button>0</button>
+      
+        <operationButton digit="÷" dispatch={dispatch}/>
+
+        <digitButton digit="1" dispatch={dispatch}/>
+        <digitButton digit="2" dispatch={dispatch}/>
+        <digitButton digit="3" dispatch={dispatch}/>
+        <operationButton digit="*" dispatch={dispatch}/>
+        <digitButton digit="4" dispatch={dispatch}/>
+        <digitButton digit="5" dispatch={dispatch}/>
+        <digitButton digit="6" dispatch={dispatch}/>
+        <operationButton digit="+" dispatch={dispatch}/>
+        <digitButton digit="7" dispatch={dispatch}/>
+        <digitButton digit="8" dispatch={dispatch}/>
+        <digitButton digit="9" dispatch={dispatch}/>
+        <operationButton digit="-" dispatch={dispatch}/>
+        <digitButton digit="." dispatch={dispatch}/>
+        <digitButton digit="0" dispatch={dispatch}/>
         <button className='span-two'>=</button>
     </div>
   )
