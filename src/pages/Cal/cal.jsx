@@ -1,8 +1,7 @@
 import React, { useReducer } from 'react'
 import "./style.css"
-import operationButton from '../../components/OperationButton/operationButton'
 import DigitButton from '../../components/DigitButton/DigitButton'
-
+import OperationButton from '../../OperationButton'
 
 export const ACTIONS = {
   ADD_DIGIT:'add-digit',
@@ -145,19 +144,19 @@ export default function () {
         <button className='span-two' onClick={() => dispatch({ type: ACTIONS.CLEAR })}>AC</button>
         <button onClick={() => dispatch({ type: ACTIONS.DELETE_DIGIT })}>DEL</button>
       
-        <operationButton operation="÷" dispatch={dispatch}/>
+        <OperationButton operation="÷" dispatch={dispatch}/>
         <DigitButton digit= "1" dispatch={dispatch}/>
         <DigitButton digit= "2" dispatch={dispatch}/>
         <DigitButton digit= "3" dispatch={dispatch}/>
-        <operationButton operation="*" dispatch={dispatch}/>
+        <OperationButton operation="*" dispatch={dispatch}/>
         <DigitButton digit= "4" dispatch={dispatch}/>
         <DigitButton digit= "5" dispatch={dispatch}/>
         <DigitButton digit= "6" dispatch={dispatch}/>
-        <operationButton operation="+" dispatch={dispatch}/>
+        <OperationButton operation="+" dispatch={dispatch}/>
         <DigitButton digit= "7" dispatch={dispatch}/>
         <DigitButton digit= "8" dispatch={dispatch}/>
         <DigitButton digit= "9" dispatch={dispatch}/>
-        <operationButton operation="-" dispatch={dispatch}/>
+        <OperationButton operation="-" dispatch={dispatch}/>
         <DigitButton digit= "." dispatch={dispatch}/>
         <DigitButton digit= "0" dispatch={dispatch}/>
 
